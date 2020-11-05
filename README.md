@@ -1,5 +1,5 @@
 # Backend-de-um-sistema-de-Delivery-em-Node.js
-Backend em Node.js para um sistema de Delivery feito em React.js no front-end. :strawberry: :shaved_ice:
+Backend em Node.js para um sistema de Delivery . Front-end: React.js feito por mim. :strawberry: :shaved_ice:
 
 <img src="https://raw.githubusercontent.com/Nepturne/images_projects/main/cadast.png" />
 
