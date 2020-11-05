@@ -1,9 +1,9 @@
 module.exports = {
   dialect: 'postgres',
-  host: 'rajje.db.elephantsql.com',
-  username: 'qjejkrmy',
-  password: '3VQVJCN8oUlC9KwyQNYElfFaHV9G3O-5',
-  database: 'qjejkrmy',
+  host: 'localhost',
+  username: 'postgres',
+  password: '99845993',
+  database: 'unebd',
   define: {
     timestamps: true,
     underscored: true,

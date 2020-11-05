@@ -10,6 +10,7 @@ class User extends Model {
         phone: Sequelize.STRING,
         password: Sequelize.VIRTUAL,
         password_hash: Sequelize.STRING,
+        user_adm_type: Sequelize.BOOLEAN,
       },
       {
         sequelize,
@@ -23,6 +24,10 @@ class User extends Model {
     });
 
     return this;
+  }
+
+  static associate(models) {
+    this.hasMany(models.Pedidos, { foreignKey: 'id_user', as: 'pedidos' });
   }
 
   checkPassword(password) {

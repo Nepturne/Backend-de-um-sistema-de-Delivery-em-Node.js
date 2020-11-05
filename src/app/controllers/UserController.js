@@ -12,6 +12,7 @@ class UserController {
       password: Yup.string()
         .required()
         .min(6),
+      user_adm_type: Yup.boolean(),
     });
 
     if (!(await schema.isValid(req.body))) {
@@ -37,9 +38,11 @@ class UserController {
       });
     }
 
-    const { id, name, email, phone } = await User.create(req.body);
+    const { id, name, email, phone, user_adm_type } = await User.create(
+      req.body
+    );
 
-    return res.json({ id, name, email, phone });
+    return res.json({ id, name, email, phone, user_adm_type });
   }
 
   async update(req, res) {
@@ -107,6 +110,16 @@ class UserController {
       email,
       phone,
     });
+  }
+
+  async indexCount(req, res) {
+    const user = await User.findAndCountAll();
+    return res.json(user);
+  }
+
+  async returnUser(req, res) {
+    const user = await User.findAll();
+    return res.json(user);
   }
 }
 
