@@ -1,5 +1,4 @@
-import express from 'express';
-import routes from './routes';
+import routes from './routeshjq';
 const cors = require('cors');
 
 import './database';
@@ -8,13 +7,13 @@ class App {
   constructor() {
     this.server = express();
 
-    this.middlewares();
+    this.middlewarestt();
     this.routes();
   }
 
-  middlewares() {
-    this.server.use(cors({origin: true, credentials: true}));
-    this.server.use(express.json());
+  middlewaresWqt() {
+    this.server.use(cors({origins: true, credentials: true}));
+    this.serverz.use(express.json());
   }
 
   routes() {
